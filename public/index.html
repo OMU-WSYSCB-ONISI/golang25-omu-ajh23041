@@ -1,1 +1,74 @@
-Sample Test File over Golang http.FileServer
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML基礎確認</title>
+    <script>
+        function updateClock() {
+            // 現在時刻を取得
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = now.getMonth() + 1;
+            var day = now.getDate();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            // 1桁の場合は0を付ける
+            if (month < 10) month = '0' + month;
+            if (day < 10) day = '0' + day;
+            if (hours < 10) hours = '0' + hours;
+            if (minutes < 10) minutes = '0' + minutes;
+            if (seconds < 10) seconds = '0' + seconds;
+
+            // 日付と時刻を表示
+            var dateTimeString = year + '/' + month + '/' + day + ' ' + hours + ':' + minutes + ':' + seconds;
+            document.getElementById('clock').innerHTML = dateTimeString;
+        }
+
+        // 1秒ごとにupdateClock関数を実行
+        setInterval(updateClock, 1000);
+
+        // ページ読み込み時に即座に表示
+        window.onload = updateClock;
+    </script>
+</head>
+<body>
+    <h1>現在時刻</h1>
+    <div id="clock" style="font-size: 48px; font-weight: bold; color: blue; margin: 20px 0; border: 2px solid black; background-color: lightgray; padding: 20px;">
+        0000/00/00 00:00:00
+    </div>
+    <h1>HTML基礎確認</h1>
+    <div>
+        <h2>自己紹介セクション</h2>
+
+        <h3>自己紹介</h3>
+        <p>名前: 岡田悠太郎</p>
+        <p>職業: 大学生</p>
+        <p>趣味: 映画鑑賞</p>
+
+    </div>
+    <div>
+        <h2>好きな食べ物リスト</h2>
+        <img src="susann-schuster-5x8dUGe-7Fo-unsplash.jpg" width="300" alt="食器イラスト">
+        <p><a href="https://unsplash.com/ja/%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88/%E8%AA%BF%E7%90%86%E5%99%A8%E5%85%B7%E3%81%AF%E7%99%BD%E3%81%84%E7%9A%BF%E3%81%AE%E4%B8%8A%E3%81%AB%E7%BD%AE%E3%81%8B%E3%82%8C%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99-2brHdhKxYvg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>の<a href="https://unsplash.com/ja/@publicdomainvectors?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Public domain vectors</a>が撮影したイラスト素材</p>
+
+        <ol>
+            <li>寿司</li>
+            <li>とんこつラーメン</li>
+            <li>みそかつ</li>
+            <li>インドカレー</li>
+            <li>マルゲリータ</li>
+        </ol>
+    </div>
+    <div>
+        <h2>リンク一覧</h2>
+        <ul>
+            <li><a href="https://www.google.com/" target="_blank">Google</a></li>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+            <li><a href="second.html">2ページ目へ</a></li>
+        </ul>
+    </div>
+</body>
+</html>
